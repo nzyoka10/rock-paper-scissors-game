@@ -1,4 +1,5 @@
-// In script.js
+//& Rock, Paper, Scissors game
+// logic code : Js
 
 let playerScore = 0;
 let computerScore = 0;
@@ -18,22 +19,26 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     // Determine the winner
     if (
-        (playerSelection === 'rock' && computerSelection === 'Scissors') ||
-        (playerSelection === 'paper' && computerSelection === 'Rock') ||
-        (playerSelection === 'scissors' && computerSelection === 'Paper')
-    ) {
-        playerScore++;
-        playerScoreSpan.textContent = playerScore;
-        resultDiv.textContent = "You Win! " + playerSelection + " beats " + computerSelection;
-    } else if (
-        (playerSelection === 'rock' && computerSelection === 'Paper') ||
-        (playerSelection === 'paper' && computerSelection === 'Scissors') ||
-        (playerSelection === 'scissors' && computerSelection === 'Rock')
-    ) {
-        computerScore++;
-        computerScoreSpan.textContent = computerScore;
-        resultDiv.textContent = "You Lose! " + computerSelection + " beats " + playerSelection;
-    } else {
+            (playerSelection === 'rock' && computerSelection === 'Scissors') ||
+            (playerSelection === 'paper' && computerSelection === 'Rock') ||
+            (playerSelection === 'scissors' && computerSelection === 'Paper')
+         ) {
+                playerScore++;
+                playerScoreSpan.textContent = playerScore;
+                resultDiv.textContent = "You Win! " + playerSelection + " beats " + computerSelection;
+            } 
+    else if (
+                (playerSelection === 'rock' && computerSelection === 'Paper') ||
+                (playerSelection === 'paper' && computerSelection === 'Scissors') ||
+                (playerSelection === 'scissors' && computerSelection === 'Rock')
+                ) 
+            {
+                computerScore++;
+                computerScoreSpan.textContent = computerScore;
+                resultDiv.textContent = "You Lose! " + computerSelection + " beats " + playerSelection;
+            } 
+    else 
+    {
         resultDiv.textContent = "It's a Tie! Both chose " + playerSelection;
     }
 }
